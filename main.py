@@ -1,6 +1,6 @@
 # Уточнение корней уравнения методом половинного деления
 from math import sqrt, cos
-count = 0  # счетчик итераций
+#count = 0  # счетчик итераций
 
 def Uravnenie(x1, x2, accuracy):
     global count
@@ -22,18 +22,21 @@ def Uravnenie(x1, x2, accuracy):
 
 left_border = 0.75  # левая граница интервала
 right_border = 1    # правая граница интервала
+count = 0
 accur = 0.001       # точность
 
 Uravnenie(left_border, right_border, accur)
 
 left_border = 0.75
 right_border = 1
+count = 0
 accur = 0.000001
 
 Uravnenie(left_border, right_border, accur)
 
 left_border = 0.75
 right_border = 1
+count = 0
 accur = 0.000000001
 
 Uravnenie(left_border, right_border, accur)

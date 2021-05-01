@@ -6,7 +6,7 @@
 Производная исходной функции: 387*sin(387*x/1000)/1000 + 1/(2*sqrt(x))
 '''
 from math import sqrt, cos, sin
-count = 0  # счетчик итераций
+#count = 0  # счетчик итераций
 
 def Uravnenie(x, accuracy):
     global count
@@ -23,12 +23,15 @@ def Uravnenie(x, accuracy):
         print('Количество итераций:', count)
 
 accur = 0.001       # точность
+count = 0
 Uravnenie(1, accur)
 
 accur = 0.000001      # точность
+count = 0
 Uravnenie(1, accur)
 
 accur = 0.000000001      # точность
+count = 0
 Uravnenie(1, accur)
 
 
