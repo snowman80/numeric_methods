@@ -1,6 +1,5 @@
 # Уточнение корней уравнения методом половинного деления
 from math import sqrt, cos
-#count = 0  # счетчик итераций
 
 def Uravnenie(x1, x2, accuracy):
     global count
