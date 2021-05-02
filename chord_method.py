@@ -26,6 +26,30 @@ def Uravnenie(x1, x2, accuracy):
     else:
         print('В данном диапазоне не может быть корней.')
 
+def Uravnenie2(x1, x2, accuracy):
+    global count
+    y1 = x1 ** 3 - 3 * x1 ** 2 + 6 * x1 + 3  # вычисляем значение функции для левой границы
+    print('y1:', y1)
+    y2 = x2 ** 3 - 3 * x2 ** 2 + 6 * x2 + 3  # вычисляем значение функции для правой границы
+    print('y2', y2)
+    # new_x = x - ((b - x)*y)/(f(b) - y)
+
+    if y1 * y2 < 0 and abs(y2) > accuracy:
+        count += 1
+        new_x = x1 - ((x2 - x1)*y1)/(y2 - y1)
+        print('Новый диапазон:', new_x, x2)
+        print('Итерация:', count)
+        Uravnenie2(x1, new_x, accuracy)
+        Uravnenie2(new_x, x2, accuracy)
+    elif y1 * y2 < 0 and (abs(y1) < accuracy or abs(y2) < accuracy):
+        print('Найден корень:', x2)
+        print('Точность:', accuracy)
+        print('Значения у1 и у2:', y1, y2)
+        print('Количество итераций:', count)
+        print('*' * 30)
+    else:
+        print('В данном диапазоне не может быть корней.')
+
 
 left_border = 0.75  # левая граница интервала
 right_border = 1  # правая граница интервала
@@ -47,3 +71,23 @@ count = 0
 accur = 0.000000001
 
 Uravnenie(left_border, right_border, accur)
+
+left_border = -0.5
+right_border = 0
+count = 0
+accur = 0.001
+
+Uravnenie2(left_border, right_border, accur)
+
+left_border = -0.5
+right_border = 0
+count = 0
+accur = 0.000001
+
+Uravnenie2(left_border, right_border, accur)
+left_border = -0.5
+right_border = 0
+count = 0
+accur = 0.000000001
+
+Uravnenie2(left_border, right_border, accur)
