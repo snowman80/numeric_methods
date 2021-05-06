@@ -76,3 +76,5 @@ count = 0
 accur = 0.000000001
 
 Uravnenie2(left_border, right_border, accur)
+
+input('Press any key ...')

@@ -32,3 +32,5 @@ Uravnenie(1, accur)
 accur = 0.000000001      # точность
 count = 0
 Uravnenie(1, accur)
+
+input('Press any key ...')
